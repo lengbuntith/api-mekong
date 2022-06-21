@@ -1,12 +1,11 @@
-
 var express = require("express");
-var cors = require('cors');
+var cors = require("cors");
 var app = express();
 var axios = require("axios");
 
 app.use(cors());
 
-app.set("port", 3000);
+app.set("port", 3621);
 app.listen(app.get("port"));
 
 app.get("/:post_id", async (req, res) => {
@@ -22,10 +21,9 @@ app.get("/:post_id", async (req, res) => {
 });
 
 app.get("/", (req, res) => {
-  res.send("running...")
+  res.send("running...");
 });
 
 app.listen(() => {
- console.log("Listening port 3000");
+  console.log("Listening port 3621");
 });
-
